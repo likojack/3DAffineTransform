@@ -1,4 +1,4 @@
-local BilinearSamplerBHWD, parent = torch.class('nn.BilinearSamplerBHWD', 'nn.Module')
+local BilinearSamplerThreeD, parent = torch.class('nn.BilinearSamplerThreeD', 'nn.Module')
 
 --[[
    BilinearSamplerBHWD() :
@@ -18,12 +18,12 @@ local BilinearSamplerBHWD, parent = torch.class('nn.BilinearSamplerBHWD', 'nn.Mo
       - if the normalized coordinates fall outside of the image, then output will be filled with zeros
 ]]
 
-function BilinearSamplerBHWD:__init()
+function BilinearSamplerThreeD:__init()
    parent.__init(self)
    self.gradInput={}
 end
 
-function BilinearSamplerBHWD:check(input, gradOutput)
+function BilinearSamplerThreeD:check(input, gradOutput)
    local inputImages = input[1]
 	local grids = input[2]
 
@@ -50,7 +50,7 @@ local function addOuterDim(t)
    return t:view(newsizes)
 end
 
-function BilinearSamplerBHWD:updateOutput(input)
+function BilinearSamplerThreeD:updateOutput(input)
    local _inputSpace = input[1]
    local _grids = input[2]
 
@@ -69,7 +69,7 @@ function BilinearSamplerBHWD:updateOutput(input)
 
    self.output:resize(inputSpace:size(1), grids:size(2), grids:size(3),grids:size(4), inputSpace:size(5))
 
-   inputSpace.nn.BilinearSamplerBHWD_updateOutput(self, inputSpace, grids, self.output)
+   inputSpace.nn.BilinearSamplerThreeD_updateOutput(self, inputSpace, grids, self.output)
 
    if _inputSpace:nDimension()==4 then
       self.output=self.output:select(1,1)
@@ -78,7 +78,7 @@ function BilinearSamplerBHWD:updateOutput(input)
    return self.output
 end
 
-function BilinearSamplerBHWD:updateGradInput(_input, _gradOutput)
+function BilinearSamplerThreeD:updateGradInput(_input, _gradOutput)
 	local _inputImages = _input[1]
 	local _grids = _input[2]
 
@@ -104,7 +104,7 @@ function BilinearSamplerBHWD:updateGradInput(_input, _gradOutput)
    local gradInputImages = self.gradInput[1]
    local gradGrids = self.gradInput[2]
 
-   inputImages.nn.BilinearSamplerBHWD_updateGradInput(self, inputImages, grids, gradInputImages, gradGrids, gradOutput)
+   inputImages.nn.BilinearSamplerThreeD_updateGradInput(self, inputImages, grids, gradInputImages, gradGrids, gradOutput)
 
    if _gradOutput:nDimension()==3 then
       self.gradInput[1]=self.gradInput[1]:select(1,1)

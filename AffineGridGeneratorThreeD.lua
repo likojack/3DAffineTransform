@@ -1,4 +1,4 @@
-local AGG, parent = torch.class('nn.AffineGridGeneratorBHWD', 'nn.Module')
+local AGG, parent = torch.class('nn.AffineGridGeneratorThreeD', 'nn.Module')
 
 --[[
    AffineGridGeneratorBHWD(height, width) :
@@ -21,6 +21,7 @@ local AGG, parent = torch.class('nn.AffineGridGeneratorBHWD', 'nn.Module')
 
 function AGG:__init(depth, height, width)
    parent.__init(self)
+   assert(depth > 1)
    assert(height > 1)
    assert(width > 1)
    self.height = height

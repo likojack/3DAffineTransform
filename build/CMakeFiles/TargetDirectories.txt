@@ -1,0 +1,2 @@
+/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir
+/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/stntd.dir

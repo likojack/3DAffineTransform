@@ -27,16 +27,15 @@ function AGG:__init(depth, height, width)
    self.height = height
    self.width = width
    self.depth = depth
-   
    self.baseGrid = torch.Tensor(depth, height, width, 4)
    for i=1,self.height do
-      self.baseGrid:select(4,3):select(2,i):fill(-1 + (i-1)/(self.height-1) * 2)
+      self.baseGrid:select(4,2):select(2,i):fill(i - 1)
    end
    for j=1,self.width do
-      self.baseGrid:select(4,2):select(3,j):fill(-1 + (j-1)/(self.width-1) * 2)
+      self.baseGrid:select(4,3):select(3,j):fill(j - 1)
    end
    for k=1,self.depth do
-      self.baseGrid:select(4,1):select(1,k):fill(-1 + (k-1)/(self.depth-1) * 2)
+      self.baseGrid:select(4,1):select(1,k):fill(k - 1)
    end
    self.baseGrid:select(4,4):fill(1)
    self.batchGrid = torch.Tensor(1, depth, height, width, 4):copy(self.baseGrid)
@@ -73,8 +72,8 @@ function AGG:updateOutput(_transformMatrix)
    end
 
    self.output:resize(batchsize, self.depth, self.height, self.width, 3)
-   local flattenedBatchGrid = self.batchGrid:view(batchsize, self.depth*self.width*self.height, 4)
-   local flattenedOutput = self.output:view(batchsize, self.depth*self.width*self.height, 3)
+   local flattenedBatchGrid = self.batchGrid:view(batchsize, self.depth*self.height*self.width, 4)
+   local flattenedOutput = self.output:view(batchsize, self.depth*self.height*self.width, 3)
    torch.bmm(flattenedOutput, flattenedBatchGrid, transformMatrix:transpose(2,3))
    if _transformMatrix:nDimension()==2 then
       self.output = self.output:select(1,1)
@@ -93,8 +92,8 @@ function AGG:updateGradInput(_transformMatrix, _gradGrid)
    end
 
    local batchsize = transformMatrix:size(1)
-   local flattenedGradGrid = gradGrid:view(batchsize, self.width*self.height, 2)
-   local flattenedBatchGrid = self.batchGrid:view(batchsize, self.width*self.height, 3)
+   local flattenedGradGrid = gradGrid:view(batchsize, self.width*self.height*self.depth, 3)
+   local flattenedBatchGrid = self.batchGrid:view(batchsize, self.width*self.height*self.depth, 4)
    self.gradInput:resizeAs(transformMatrix):zero()
    self.gradInput:baddbmm(flattenedGradGrid:transpose(2,3), flattenedBatchGrid)
    -- torch.baddbmm doesn't work on cudatensors for some reason

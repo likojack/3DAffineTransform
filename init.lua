@@ -6,11 +6,11 @@ if withCuda then
    require 'libcustntd'
 end
 
---require('stn3d.AffineTransformMatrixGenerator')
 require('stntd.AffineGridGeneratorThreeD')
 require('stntd.BilinearSamplerThreeD')
---require('stn3d.TransformationMatrix3x4GeneratorEuler')
-
---require('stn.test')
+require('stntd.AffineTransformMatrixGenerator')
+require('stntd.QuatToEuler')
+require('stntd.CustomSoftMaxCriterion')
+require('stntd.AffineTransformPoint')
 
 return nn

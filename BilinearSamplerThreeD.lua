@@ -56,7 +56,7 @@ function BilinearSamplerThreeD:updateOutput(input)
 
    local inputSpace, grids
    if _inputSpace:nDimension()==4 then
-      inputImages = addOuterDim(_inputSpace)
+      inputSpace = addOuterDim(_inputSpace)
       grids = addOuterDim(_grids)
    else
       inputSpace = _inputSpace
@@ -64,7 +64,6 @@ function BilinearSamplerThreeD:updateOutput(input)
    end
 
    local input = {inputSpace, grids}
-
    self:check(input)
 
    self.output:resize(inputSpace:size(1), grids:size(2), grids:size(3),grids:size(4), inputSpace:size(5))
@@ -83,7 +82,7 @@ function BilinearSamplerThreeD:updateGradInput(_input, _gradOutput)
 	local _grids = _input[2]
 
    local inputImages, grids, gradOutput
-   if _inputImages:nDimension()==3 then
+   if _inputImages:nDimension()==4 then
       inputImages = addOuterDim(_inputImages)
       grids = addOuterDim(_grids)
       gradOutput = addOuterDim(_gradOutput)
@@ -106,7 +105,7 @@ function BilinearSamplerThreeD:updateGradInput(_input, _gradOutput)
 
    inputImages.nn.BilinearSamplerThreeD_updateGradInput(self, inputImages, grids, gradInputImages, gradGrids, gradOutput)
 
-   if _gradOutput:nDimension()==3 then
+   if _gradOutput:nDimension()==4 then
       self.gradInput[1]=self.gradInput[1]:select(1,1)
       self.gradInput[2]=self.gradInput[2]:select(1,1)
    end

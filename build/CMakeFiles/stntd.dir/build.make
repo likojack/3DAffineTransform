@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kejie/repository/stnbhwd/ThreeD
+CMAKE_SOURCE_DIR = /home/kejie/repository/shapeprimitive/ThreeD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kejie/repository/stnbhwd/ThreeD/build
+CMAKE_BINARY_DIR = /home/kejie/repository/shapeprimitive/ThreeD/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/stntd.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/stntd.dir/flags.make
 
 CMakeFiles/stntd.dir/init.c.o: CMakeFiles/stntd.dir/flags.make
 CMakeFiles/stntd.dir/init.c.o: ../init.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/stntd.dir/init.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/stntd.dir/init.c.o   -c /home/kejie/repository/stnbhwd/ThreeD/init.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/stntd.dir/init.c.o   -c /home/kejie/repository/shapeprimitive/ThreeD/init.c
 
 CMakeFiles/stntd.dir/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/stntd.dir/init.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/kejie/repository/stnbhwd/ThreeD/init.c > CMakeFiles/stntd.dir/init.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/kejie/repository/shapeprimitive/ThreeD/init.c > CMakeFiles/stntd.dir/init.c.i
 
 CMakeFiles/stntd.dir/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/stntd.dir/init.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/kejie/repository/stnbhwd/ThreeD/init.c -o CMakeFiles/stntd.dir/init.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/kejie/repository/shapeprimitive/ThreeD/init.c -o CMakeFiles/stntd.dir/init.c.s
 
 CMakeFiles/stntd.dir/init.c.o.requires:
 .PHONY : CMakeFiles/stntd.dir/init.c.o.requires
@@ -99,6 +99,6 @@ CMakeFiles/stntd.dir/clean:
 .PHONY : CMakeFiles/stntd.dir/clean
 
 CMakeFiles/stntd.dir/depend:
-	cd /home/kejie/repository/stnbhwd/ThreeD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kejie/repository/stnbhwd/ThreeD /home/kejie/repository/stnbhwd/ThreeD /home/kejie/repository/stnbhwd/ThreeD/build /home/kejie/repository/stnbhwd/ThreeD/build /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/stntd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kejie/repository/shapeprimitive/ThreeD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kejie/repository/shapeprimitive/ThreeD /home/kejie/repository/shapeprimitive/ThreeD /home/kejie/repository/shapeprimitive/ThreeD/build /home/kejie/repository/shapeprimitive/ThreeD/build /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/stntd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/stntd.dir/depend
 

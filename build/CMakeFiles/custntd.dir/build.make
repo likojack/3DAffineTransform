@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kejie/repository/stnbhwd/ThreeD
+CMAKE_SOURCE_DIR = /home/kejie/repository/shapeprimitive/ThreeD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kejie/repository/stnbhwd/ThreeD/build
+CMAKE_BINARY_DIR = /home/kejie/repository/shapeprimitive/ThreeD/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/custntd.dir/depend.make
@@ -258,17 +258,17 @@ CMakeFiles/custntd.dir/./custntd_generated_init.cu.o: /usr/local/cuda/include/ve
 CMakeFiles/custntd.dir/./custntd_generated_init.cu.o: /usr/local/cuda/include/vector_types.h
 CMakeFiles/custntd.dir/./custntd_generated_init.cu.o: CMakeFiles/custntd.dir/custntd_generated_init.cu.o.cmake
 CMakeFiles/custntd.dir/./custntd_generated_init.cu.o: ../init.cu
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building NVCC (Device) object CMakeFiles/custntd.dir//./custntd_generated_init.cu.o"
-	cd /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir && /usr/bin/cmake -E make_directory /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//.
-	cd /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Release -D generated_file:STRING=/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o -D generated_cubin_file:STRING=/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o.cubin.txt -P /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//custntd_generated_init.cu.o.cmake
+	cd /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir && /usr/bin/cmake -E make_directory /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//.
+	cd /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Release -D generated_file:STRING=/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o -D generated_cubin_file:STRING=/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o.cubin.txt -P /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//custntd_generated_init.cu.o.cmake
 
 # Object files for target custntd
 custntd_OBJECTS =
 
 # External object files for target custntd
 custntd_EXTERNAL_OBJECTS = \
-"/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir/./custntd_generated_init.cu.o"
+"/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir/./custntd_generated_init.cu.o"
 
 libcustntd.so: CMakeFiles/custntd.dir/./custntd_generated_init.cu.o
 libcustntd.so: CMakeFiles/custntd.dir/build.make
@@ -291,6 +291,6 @@ CMakeFiles/custntd.dir/clean:
 .PHONY : CMakeFiles/custntd.dir/clean
 
 CMakeFiles/custntd.dir/depend: CMakeFiles/custntd.dir/./custntd_generated_init.cu.o
-	cd /home/kejie/repository/stnbhwd/ThreeD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kejie/repository/stnbhwd/ThreeD /home/kejie/repository/stnbhwd/ThreeD /home/kejie/repository/stnbhwd/ThreeD/build /home/kejie/repository/stnbhwd/ThreeD/build /home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kejie/repository/shapeprimitive/ThreeD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kejie/repository/shapeprimitive/ThreeD /home/kejie/repository/shapeprimitive/ThreeD /home/kejie/repository/shapeprimitive/ThreeD/build /home/kejie/repository/shapeprimitive/ThreeD/build /home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/custntd.dir/depend
 

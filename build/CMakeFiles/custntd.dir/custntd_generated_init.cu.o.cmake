@@ -56,18 +56,18 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/home/kejie/repository/stnbhwd/ThreeD/init.cu") # path
-set(NVCC_generated_dependency_file "/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//custntd_generated_init.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//custntd_generated_init.cu.o.depend") # path
+set(source_file "/home/kejie/repository/shapeprimitive/ThreeD/init.cu") # path
+set(NVCC_generated_dependency_file "/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//custntd_generated_init.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//custntd_generated_init.cu.o.depend") # path
 set(CUDA_make2cmake "/home/kejie/torch/install/share/cmake/torch/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/home/kejie/torch/install/share/cmake/torch/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "/usr/bin/cc") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//.") # path
-set(generated_file_internal "/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o") # path
-set(generated_cubin_file_internal "/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o.cubin.txt") # path
+set(generated_file_path "/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//.") # path
+set(generated_file_internal "/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o") # path
+set(generated_cubin_file_internal "/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir//./custntd_generated_init.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/usr/local/cuda/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS -arch=sm_20 ;; ) # list
@@ -77,7 +77,7 @@ set(CUDA_NVCC_FLAGS_DEBUG  ; )
 set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;-Dcustntd_EXPORTS) # list
-set(CUDA_NVCC_INCLUDE_ARGS "-I/usr/local/cuda/include;-I/home/kejie/torch/install/include;-I/home/kejie/torch/install/include/TH;-I/home/kejie/repository/stnbhwd/ThreeD;-I/home/kejie/torch/install/include/THC;-I/usr/local/cuda/include") # list (needs to be in quotes to handle spaces properly).
+set(CUDA_NVCC_INCLUDE_ARGS "-I/usr/local/cuda/include;-I/home/kejie/torch/install/include;-I/home/kejie/torch/install/include/TH;-I/home/kejie/repository/shapeprimitive/ThreeD;-I/home/kejie/torch/install/include/THC;-I/usr/local/cuda/include") # list (needs to be in quotes to handle spaces properly).
 set(format_flag "-c") # string
 set(cuda_language_flag ) # list
 

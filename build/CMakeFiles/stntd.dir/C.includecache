@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/kejie/repository/stnbhwd/ThreeD/generic/BilinearSamplerThreeD.c
+/home/kejie/repository/shapeprimitive/ThreeD/generic/BilinearSamplerThreeD.c
 stdbool.h
 -
 stdio.h
 -
 
-/home/kejie/repository/stnbhwd/ThreeD/init.c
+/home/kejie/repository/shapeprimitive/ThreeD/init.c
 TH.h
-/home/kejie/repository/stnbhwd/ThreeD/TH.h
+/home/kejie/repository/shapeprimitive/ThreeD/TH.h
 luaT.h
-/home/kejie/repository/stnbhwd/ThreeD/luaT.h
+/home/kejie/repository/shapeprimitive/ThreeD/luaT.h
 generic/BilinearSamplerThreeD.c
-/home/kejie/repository/stnbhwd/ThreeD/generic/BilinearSamplerThreeD.c
+/home/kejie/repository/shapeprimitive/ThreeD/generic/BilinearSamplerThreeD.c
 THGenerateFloatTypes.h
-/home/kejie/repository/stnbhwd/ThreeD/THGenerateFloatTypes.h
+/home/kejie/repository/shapeprimitive/ThreeD/THGenerateFloatTypes.h
 
 /home/kejie/torch/install/include/TH/TH.h
 THGeneral.h

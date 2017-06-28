@@ -1,4 +1,4 @@
-# Install script for directory: /home/kejie/repository/stnbhwd/ThreeD
+# Install script for directory: /home/kejie/repository/shapeprimitive/ThreeD
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib/libstntd.so"
          RPATH "$ORIGIN/../lib:/home/kejie/torch/install/lib:/opt/OpenBLAS/lib")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib" TYPE MODULE FILES "/home/kejie/repository/stnbhwd/ThreeD/build/libstntd.so")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib" TYPE MODULE FILES "/home/kejie/repository/shapeprimitive/ThreeD/build/libstntd.so")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib/libstntd.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib/libstntd.so")
     FILE(RPATH_CHANGE
@@ -54,17 +54,19 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lua/stntd" TYPE FILE FILES
-    "/home/kejie/repository/stnbhwd/ThreeD/init.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/AffineTransformMatrixGenerator.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/test.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/QuatToEuler.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/CustomSoftMaxCriterion.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/AffineTransformPoint.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/testCriterion.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/testAffinePoint.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/testGradient.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/BilinearSamplerThreeD.lua"
-    "/home/kejie/repository/stnbhwd/ThreeD/AffineGridGeneratorThreeD.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/init.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/AffineTransformMatrixGenerator.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/SE3TransformMatrix.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/test.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/QuatToEuler.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/CustomSoftMaxCriterion.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/AffineTransformPoint.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/testCriterion.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/debug.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/testAffinePoint.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/testGradient.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/BilinearSamplerThreeD.lua"
+    "/home/kejie/repository/shapeprimitive/ThreeD/AffineGridGeneratorThreeD.lua"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
@@ -75,7 +77,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib/libcustntd.so"
          RPATH "$ORIGIN/../lib:/home/kejie/torch/install/lib:/usr/local/cuda/lib64:/opt/OpenBLAS/lib")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib" TYPE MODULE FILES "/home/kejie/repository/stnbhwd/ThreeD/build/libcustntd.so")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib" TYPE MODULE FILES "/home/kejie/repository/shapeprimitive/ThreeD/build/libcustntd.so")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib/libcustntd.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/luarocks/rocks/stntd/scm-1/lib/libcustntd.so")
     FILE(RPATH_CHANGE
@@ -94,7 +96,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/kejie/repository/stnbhwd/ThreeD/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/kejie/repository/shapeprimitive/ThreeD/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/kejie/repository/stnbhwd/ThreeD/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/kejie/repository/shapeprimitive/ThreeD/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

@@ -1,11 +1,13 @@
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lib/libstntd.so
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/init.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/AffineTransformMatrixGenerator.lua
+/home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/SE3TransformMatrix.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/test.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/QuatToEuler.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/CustomSoftMaxCriterion.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/AffineTransformPoint.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/testCriterion.lua
+/home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/debug.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/testAffinePoint.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/testGradient.lua
 /home/kejie/torch/install/lib/luarocks/rocks/stntd/scm-1/lua/stntd/BilinearSamplerThreeD.lua

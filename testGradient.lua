@@ -18,21 +18,21 @@ local jac = nn.Jacobian
 
 
 
--- -- test matrix generator
--- useRotation = true
--- useScale = true
--- useTranslation = true
--- local module = nn.AffineTransformMatrixGenerator(useRotation,useScale,useTranslation)
--- nbNeededParams = 9
--- local nframes = torch.random(2,10)
--- local params = torch.zeros(nframes,nbNeededParams):uniform()
--- local err = jac.testJacobian(module,params)
--- print('==> error matrix: ' .. err)
--- if err<precision then
---    print('==> module OK')
--- else
---       print('==> error too large, incorrect implementation')
--- end
+-- test matrix generator
+useRotation = true
+useScale = true
+useTranslation = true
+local module = nn.SE3TransformMatrix(useRotation,useScale,useTranslation)
+nbNeededParams = 9
+local nframes = torch.random(2,10)
+local params = torch.zeros(nframes,nbNeededParams):uniform()
+local err = jac.testJacobian(module,params)
+print('==> error matrix: ' .. err)
+if err<precision then
+   print('==> module OK')
+else
+      print('==> error too large, incorrect implementation')
+end
 
 
 -- -- test grid generator
@@ -53,56 +53,56 @@ local jac = nn.Jacobian
 
 
 -- test sampler
-local height = torch.random(1,5)
-local width = torch.random(1,5)
-local depth = torch.random(1,5)
-local channels = torch.random(1,6)
-local height = 8
-local width = 8
-local depth = 8
-local channels = 1
-local multiplier = 2
-local inputImages = torch.zeros(1, depth, height, width, channels):uniform(0,1)
-local grids = torch.zeros(1, depth*multiplier, height*multiplier, width*multiplier, 3):uniform(0, height-1)
-local module = nn.BilinearSamplerThreeD()
+-- local height = torch.random(1,5)
+-- local width = torch.random(1,5)
+-- local depth = torch.random(1,5)
+-- local channels = torch.random(1,6)
+-- local height = 8
+-- local width = 8
+-- local depth = 8
+-- local channels = 1
+-- local multiplier = 2
+-- local inputImages = torch.zeros(1, depth, height, width, channels):uniform(0,1)
+-- local grids = torch.zeros(1, depth*multiplier, height*multiplier, width*multiplier, 3):uniform(0, height-1)
+-- local module = nn.BilinearSamplerThreeD()
 
--- test input images (first element of input table)
-module._updateOutput = module.updateOutput
-function module:updateOutput(input)
-  return self:_updateOutput({input, grids})
-end
+-- -- test input images (first element of input table)
+-- module._updateOutput = module.updateOutput
+-- function module:updateOutput(input)
+--   return self:_updateOutput({input, grids})
+-- end
 
-module._updateGradInput = module.updateGradInput
-function module:updateGradInput(input, gradOutput)
-  self:_updateGradInput({input, grids}, gradOutput)
-  return self.gradInput[1]
-end
+-- module._updateGradInput = module.updateGradInput
+-- function module:updateGradInput(input, gradOutput)
+--   self:_updateGradInput({input, grids}, gradOutput)
+--   return self.gradInput[1]
+-- end
 
-local errImages = jac.testJacobian(module,inputImages)
-print('==> errorImage: ' .. errImages)
-if errImages<precision then
-   print('==> module OK')
-else
-      print('==> error too large, incorrect implementation')
-end
+-- local errImages = jac.testJacobian(module,inputImages)
+-- print('==> errorImage: ' .. errImages)
+-- if errImages<precision then
+--    print('==> module OK')
+-- else
+--       print('==> error too large, incorrect implementation')
+-- end
 
--- test grids (second element of input table)
-function module:updateOutput(input)
-  return self:_updateOutput({inputImages, input})
-end
+-- -- test grids (second element of input table)
+-- function module:updateOutput(input)
+--   return self:_updateOutput({inputImages, input})
+-- end
 
-function module:updateGradInput(input, gradOutput)
-  self:_updateGradInput({inputImages, input}, gradOutput)
-  return self.gradInput[2]
-end
+-- function module:updateGradInput(input, gradOutput)
+--   self:_updateGradInput({inputImages, input}, gradOutput)
+--   return self.gradInput[2]
+-- end
 
-local errGrids = jac.testJacobian(module,grids)
-print('==> errorGrid: ' .. errGrids)
-if errGrids<precision then
-   print('==> module OK')
-else
-      print('==> error too large, incorrect implementation')
-end
+-- local errGrids = jac.testJacobian(module,grids)
+-- print('==> errorGrid: ' .. errGrids)
+-- if errGrids<precision then
+--    print('==> module OK')
+-- else
+--       print('==> error too large, incorrect implementation')
+-- end
 
 
 -- local function criterionJacobianTest(cri, input, target)

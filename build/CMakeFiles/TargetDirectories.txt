@@ -1,2 +1,2 @@
-/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/custntd.dir
-/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/stntd.dir
+/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/custntd.dir
+/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/stntd.dir

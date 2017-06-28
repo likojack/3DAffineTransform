@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC  -fopenmp -O3 -DNDEBUG   -shared -Wl,-soname,libstn3d.so -o libstn3d.so CMakeFiles/stn3d.dir/init.c.o  -L/home/kejie/torch/install/lib -lluaT /home/kejie/torch/install/lib/libTH.so.0 /opt/OpenBLAS/lib/libopenblas.so -lrt -lm -Wl,-rpath,/home/kejie/torch/install/lib:/opt/OpenBLAS/lib::::::::::::::: 

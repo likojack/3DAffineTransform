@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/kejie/repository/stnbhwd/ThreeD/init.c" "/home/kejie/repository/stnbhwd/ThreeD/build/CMakeFiles/stntd.dir/init.c.o"
+  "/home/kejie/repository/shapeprimitive/ThreeD/init.c" "/home/kejie/repository/shapeprimitive/ThreeD/build/CMakeFiles/stntd.dir/init.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 
